@@ -1,7 +1,11 @@
-import "./App.css";
+import Calculatrice from "./Components/Calculatrice/Calculatrice";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Calculatrice />
+    </>
+  );
 }
 
 export default App;
