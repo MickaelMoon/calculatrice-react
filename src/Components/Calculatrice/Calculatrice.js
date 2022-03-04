@@ -47,6 +47,10 @@ export default function Calculatrice() {
       setResult(eval(value.toString()));
     }
   };
+  const clearAll = () => {
+    setResult("");
+    setCalc("");
+  };
   return (
     <div className="App">
       <div className="calculator">
@@ -57,11 +61,12 @@ export default function Calculatrice() {
         <div className="component-clavier">
           <div className="operators">
             <button onClick={deleteLast}>DEL</button>
-            <button onClick={() => updateCalc("%")}>%</button>
+            <button onClick={clearAll}>C</button>
+            <button onClick={() => updateCalc("+")}>+</button>
+            <button onClick={() => updateCalc("-")}>-</button>
             <button onClick={() => updateCalc("/")}>/</button>
             <button onClick={() => updateCalc("*")}>x</button>
-            <button onClick={() => updateCalc("-")}>-</button>
-            <button onClick={() => updateCalc("+")}>+</button>
+            <button onClick={() => updateCalc("%")}>%</button>
           </div>
           <div className="digits">
             {createDigits()}
